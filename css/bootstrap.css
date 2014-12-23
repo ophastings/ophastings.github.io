@@ -3789,6 +3789,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
     padding:10px;
 }
 
+.li passive {
+	 display:inline-block;
+}
+
 .nav:before,
 .nav:after {
   display: table;
