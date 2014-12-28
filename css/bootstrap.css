@@ -3777,20 +3777,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-	text-align:center;
-
-}
-
-.nav li{
-    display:inline;
-}
-.nav a{
-    display:inline-block;
-    padding:10px;
-}
-
-.li passive {
-	 display:inline-block;
 }
 
 .nav:before,
