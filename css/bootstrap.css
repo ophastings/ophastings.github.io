@@ -3905,9 +3905,23 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-bottom-color: #ffffff;
 }
 
+/*
 .nav-pills > li {
   float: left;
 }
+*/
+
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-pills {
+    text-align:center;
+}
+
 
 .nav-pills > li > a {
   border-radius: 5px;
