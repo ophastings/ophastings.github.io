@@ -1,0 +1,96 @@
+clear all
+use "/Users/Pat/Dropbox/D_Berkeley/My Courses/Stata Intensive/DLab Stata Intensive Jan 2015/GSS2012.dta"
+//or
+use http://ophastings.com/GSS2012
+
+
+* Part 1 of Practice Exercise
+lookfor age
+histogram age, w(1)
+histogram age, w(5)
+histogram age, w(10) percent
+
+recode age (18/35 = 1)(36/55 = 2)(56/89 = 3), gen(generation)
+tab age generation
+label var generation "generation of respondent"
+label def GEN 1 "Millennials (18-35)" 2 "Generation X (36-55)" 3 "Baby Boomers+ (56-89)"
+label val generation GEN
+tab generation
+
+* Part 2
+lookfor news
+tab news
+tab news, nolab
+recode news (5=1)(4=2)(3=3)(2=4)(1=5), gen(news2)
+tab news news2
+generate news3 = 6 - news
+
+sum news2 if generation == 1
+sum news2 if generation == 2
+sum news2 if generation == 3
+tab generation, sum(news2)
+graph bar news2, over(generation)
+
+bysort generation: sum news2
+tab sex, sum(news2)
+
+tw (lfit news2 age if sex == 1) (lfit news2 age if sex == 2), ///
+	legend(lab(1 "Males") lab(2 "Females"))
+
+ttest news2, by(sex)
+regress news2 sex##c.age
+
+***************
+
+recode partyid (0/1 = 1)(5/6 = 2)(nonm = 3), gen(party3)
+lab def PARTY 1 "Dem" 2 "GOP" 3 "Other"
+label val party3 PARTY
+gen ineqact = 8 - eqwlth
+
+tw (lfit ineq educ if party3 == 1)(lfit ineq educ if party3 == 2)(lfit ineq educ if party3 == 3)
+
+tab party3, sum(ineq)
+tabstat ineqact, by(party3) stats(mean sd p25 p75)
+
+ttest ineq, by(sex)
+ttest ineq, by(party3)
+
+recode party3 (2/3 = 0), gen(party_dem)
+recode party3 (1 3 = 0)(2 = 1), gen(party_gop)
+recode party3 (1 2 = 0)(3 = 1), gen(party_other)
+
+tab party3, gen(party_)
+
+ttest ineq, by(party_dem)
+
+regress ineq sex educ age
+regress ineq sex educ age party3 // BAD!!!!!
+regress ineq sex educ age party_dem party_other
+regress ineq sex educ age party_*
+regress ineq sex educ age i.party3
+regress ineq sex educ age ib2.party3
+
+gen educXdem = educ * party_dem
+gen educXgop = educ * party_gop
+gen educXother = educ * party_other
+
+regress ineq sex age educ ib1.party3 educXgop educXother
+regress ineq sex age c.educ##i.party3
+margins party3
+margins party3, at(educ = (12(4)20))
+marginsplot
+
+regress ineq sex c.age##c.age c.educ##i.party3
+margins party3
+margins party3, atmean
+
+regress ineq sex c.age##c.age c.educ##i.party3 realinc
+gen lninc = log(realinc)
+regress ineq sex c.age##c.age c.educ##i.party3 lninc
+xtile inc5 = realinc, nq(5)
+tab inc5, sum(realinc)
+regress ineq sex age educ i.party3##i.inc5
+margins party3##inc5
+marginsplot, xdim(inc5)
+margins, at(party3 = (1(1)3) inc5 = (1(1)5)) atmeans
+marginsplot, xdim(inc5) scheme(s1mono) noci
