@@ -99,7 +99,7 @@ esttab _all using mytable.rtf, nobase order(2.party3 3.party3 educ 2.party3#c.ed
 	coeflabel(2.party3 "GOP" 3.party3 "Other" educ "education" ///
 	2.party3#c.educ "GOP X educ" 3.party3#c.educ "Other X educ")
 	
-// export to pdf
+// export to csv
 esttab _all using mytable.csv, nobase order(2.party3 3.party3 educ 2.party3#c.educ 3.party3#c.educ age sex) ///
 	nonumbers mtitle("Model 1" "Model 2" "Model 3") not ///
 	coeflabel(2.party3 "GOP" 3.party3 "Other" educ "education" ///
