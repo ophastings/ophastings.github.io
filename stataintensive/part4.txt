@@ -1,0 +1,47 @@
+clear
+// use the same hurricane data from the practice exercise
+import delimited hurricane_nodeaths.csv, clear
+drop if ndam == .
+destring year, replace
+merge 1:1 name year using hurricanedeaths.dta
+
+// a fancier graph
+tw (scatter alldeaths ndam if gender_mf == 0, msymbol(th))  ///
+	(scatter alldeaths ndam if gender_mf == 1, msymbol(oh)) ///
+	(lfit alldeaths ndam if gender_mf == 0, )  ///
+	(lfit alldeaths ndam if gender_mf == 1, ), ///
+	legend(lab(1 "Masculine Name") lab(2 "Feminine Name")) ///
+	xtitle("Damage") ytitle("Deaths") ///
+	title("Hurricane Deaths by Damage") scheme(s1mono) // graph schemes are great.
+
+corr minpressure_before ndam
+
+// using egen
+egen mean_ndam = mean(ndam)
+egen std_ndam = std(ndam)
+egen std_minpressure = std(minpressure_before)
+
+// making an index variable	
+corr std_ndam std_minpressure
+gen intensity = std_ndam + (-1)*std_minpressure 
+// or...
+alpha ndam minpressure_before, std gen(intensity2)
+
+// for loops
+forvalues i = 1/5 {
+	eststo CAT`i': reg alldeaths gender_mf if category == `i'
+}
+esttab CAT*
+
+foreach var in gender_mf year category {
+	tab `var'
+}
+
+// globals
+global ivs "gender_mf category ndam"
+reg alldeaths $ivs
+
+// you can loop through the elements of a global
+foreach var of global ivs {
+	tab `var'
+}
