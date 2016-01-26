@@ -5340,7 +5340,7 @@ a.list-group-item:focus {
 }
 
 .panel-body {
-  padding: 0px;
+  padding: 15px;
 }
 
 .panel-body:before,
