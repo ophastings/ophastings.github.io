@@ -81,7 +81,7 @@ iframe {font-family: 'Merriweather', Georgia, Times; font-size: 16px;}
 /* Code */
 pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 
-.step { border-radius: 20%; 
+.step { border-radius: 50%; 
 	-moz-border-radius: 50%; 
 	-webkit-border-radius: 50%; 
 	width: 35px; 
