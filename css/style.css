@@ -9,7 +9,7 @@ blockquote p { font-size: 16px; line-height: 1.6em; }
 
 /* Masthead */
 .header { font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; text-align: center; }
-.header h3 {padding-bottom: 4px; font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; text-align: center; font-size: 20px; }
+.header h3 {padding-bottom: 4px; font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; text-align: center; font-size: 30px; }
 
 .footer { font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; }
 
