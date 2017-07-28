@@ -1,0 +1,102 @@
+/*************************************************
+ *  An Example Green Theme for Hugo Academic
+ *  Set `custom_css = ["green.css"] in `config.toml`.
+ *  Then save this file as `/static/css/green.css` relative to your website root (i.e. not in `themes/academic` directory).
+ *  https://github.com/gcushen/hugo-academic
+ 
+ *CSU color is (30 77 43)
+ * Alternate is (196, 214, 0)
+ *64, 164, 92
+ * 108, 198, 133
+ 
+ **************************************************/
+
+a,
+a:visited,
+h3.article-title a:hover {
+    color: rgb(57,147,82);
+}
+
+a:hover {
+    color: rgb(108,198,133);
+}
+
+.navbar-default .navbar-nav li a:hover,
+.btn-primary,
+.btn-primary.btn-outline {
+    color: rgb(57,147,82);
+}
+
+/* Articles */
+
+.article-title a {
+    color: #151515;
+}
+
+.article-metadata a {
+    color: #888;
+}
+
+.article-metadata a:hover {
+    color: rgb(57,147,82);
+}
+
+/* Standard buttons */
+
+.btn-primary,
+.btn-primary.btn-outline {
+    border-color: rgb(57,147,82);
+}
+
+/* Hover buttons */
+
+.btn-primary.btn-outline:hover {
+    border-color: rgb(57,147,82);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:visited,
+.btn-primary.btn-outline:active {
+    background-color: rgb(57,147,82);
+}
+
+/* Toolbar buttons */
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  color: rgb(57,147,82);
+  font-weight: 700;
+  background-color: transparent !important; /* Override Bootstrap. */
+}
+
+.btn-toolbar .btn.btn-primary {
+  background: rgb(108,198,133);
+}
+
+.btn-toolbar .btn.btn-primary:hover,
+.btn-toolbar .btn.btn-primary:focus {
+  background-color: rgba(0,230,118,0.6);
+}
+
+.btn-toolbar .btn.btn-primary:active,
+.btn-toolbar .btn.btn-primary.active {
+  background-color: rgba(0,230,118,1);
+}
+
+
+/* Change image buttons */
+
+#profile .portrait {
+  background-image: url('../img/portrait.jpg');
+  width: 250px;
+  height: 275px;
+  margin: 0 auto;
+  border-radius: 5%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
