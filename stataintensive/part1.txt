@@ -1,0 +1,136 @@
+/*
+This is a comment
+*/
+
+// As is this
+
+* And this
+
+clear all
+set more off, permanently // get rid of the annoying "more"
+use "GSS2012.dta"
+
+// Summarize
+sum educ
+sum educ, detail
+sum educ if sex == 1
+sum educ if sex == 2
+sum educ in 1/100
+sum educ in 1
+sum educ [w = wtss]
+
+// Oneway Table
+tabulate sex
+tabulate sex, nolabel
+tab educ
+tab educ, missing
+
+// Generate a new variable
+generate gradschool = .
+replace gradschool = 1 if educ > 16
+replace gradschool = 0 if educ <= 16
+replace gradschool = . if missing(educ)
+
+drop gradschool // no problem to drop it, we have a do file!
+
+// Another approach
+generate gradschool = .
+replace gradschool = 1 if educ > 16 & !missing(educ)
+replace gradschool = 0 if educ <= 16 
+
+tab gradschool, missing
+
+// Recode 
+recode educ (0/16 = 0) (17/20 = 1), gen(gradschool2) // This makes the same variable
+
+// Check our recoding
+tab gradschool educ
+tab educ gradschool
+tab gradschool gradschool2, missing
+
+/* 
+Now you try: Make a variable "hs" for those who have 
+	completed exacly 12 years of education
+*/
+
+// we could make it like this
+generate hs = . 
+replace hs = 1 if educ == 12 
+replace hs = 0 if educ != 12 & !missing(educ)
+
+drop hs
+
+recode educ (0/11 = 0)(12 = 1)(13/20 = 0), gen(hs) // or this
+
+drop hs
+
+generate hs = (educ == 12) if !missing(educ) // or this
+
+// label our variables and values
+label var gradschool "Resp went to grad school"
+desc gradschool
+tab gradschool
+
+label define GRAD 1 "Resp went to grad school" 0 "Resp didn't"
+label val gradschool GRAD
+
+/* Now you try: label the values and variable "hs" */
+
+label var hs "Completed HS but really no college"
+label def HS 1 "HS but no more" 0 "No HS or too much edu"
+label val hs HS
+tab hs
+
+label drop HS // if wanted to get rid of a labeling scheme
+
+// twoway tables
+tab gradschool sex
+tab gradschool sex, row
+tab gradschool sex, col
+tab gradschool sex, col chi2 exact
+
+// make a categorical variable for party
+tab partyid
+tab partyid, missing nolab
+recode partyid (0/1 = 1)(5/6 = 2)(nonm=3), gen(party3)
+lab def PARTY 1 "Dem" 2 "GOP" 3 "Other"
+lab val party3 PARTY
+
+// recode the support for goverment actionon ineuqality
+// so that support for action is the larger value
+* recode eqw (7=1)(6=2)...etc  This works...
+gen ineqact = 8 - eqwlth // but this is much quicker
+// note: download revrs to automatically recode the labels too.
+
+tab ineqact eqw
+
+// histrograms
+histogram ineq
+histogram ineq, freq discrete
+
+hist age
+hist age, width(1)
+kdensity age
+
+// bar graphs
+graph bar ineq, over(sex)
+graph bar ineq, over(party3)
+graph bar ineq, over(party3) over(sex)
+graph bar ineq, over(sex) over(party3)
+
+// scatterplots
+graph twoway scatter ineq educ
+graph twoway scatter ineq educ, jitter(4)
+graph twoway (scatter ineq educ, jitter(4))(lfit ineq educ), 
+graph twoway (scatter ineq educ, jitter(4))(lfit ineq educ) ///
+	(qfit ineq educ), /// 
+	legend(lab(1 "point value") lab(2 "linear fit") lab(3 "quadratic fit"))
+	
+tw (lfit ineq educ if sex == 1)(lfit ineq educ if sex == 2), ///
+	legend(lab( 1 "males") lab(2 "females"))
+
+tw (lfit ineq educ if party3 == 1)(lfit ineq educ if party3 == 2)(lfit ineq educ if party3 == 3), ///
+	legend(lab (1 "Dem") lab(2 "GOP") lab(3 "other"))
+
+// boxplots
+graph box ineq, over(educ)
