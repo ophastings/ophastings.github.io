@@ -92,8 +92,8 @@ a:hover {
 
 #profile .portrait {
   background-image: url('../img/portrait.jpg');
-  width: 220px;
-  height: 240px;
+  width: 240px;
+  height: 250px;
   margin: 0 auto;
   border-radius: 10%;
   background-size: cover;
