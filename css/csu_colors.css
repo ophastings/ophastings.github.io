@@ -101,4 +101,22 @@ a:hover {
   -moz-background-size: cover;
 }
 
+html {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: rgba(0,0,0,0.8);
+  line-height: 1.65;
+}
+
+html {
+  font-family: 'Merriweather', serif;
+  font-size: 14px; 
+  color: rgba(0,0,0,0.8);
+  line-height: 1.55;
+}
+@media screen and (min-width: 58em) {
+  html {
+    font-size: 18px;
+  }
+}
 
