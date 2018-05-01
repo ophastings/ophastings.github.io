@@ -11,12 +11,34 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Less Equal, Less Trusting? Longitudinal and Cross-sectional Effects of Income Inequality on Trust in U.S. States, 1973–2012</title>
+      <link>http://ophastings.com/publication/trustinequality2018/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://ophastings.com/publication/trustinequality2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Income Inequality and Class Divides in Parental Investments</title>
       <link>http://ophastings.com/publication/parentinginequality2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://ophastings.com/publication/parentinginequality2018/</guid>
-      <description></description>
+      <description>
+
+&lt;h3 id=&#34;stata-replication-files&#34;&gt;Stata Replication Files&lt;/h3&gt;
+
+&lt;p&gt;Data and code for the analyses in the paper and the supplement can be downloaded below:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/sh/e79e37s97d01dnp/AABniskIQhQp0KgvnYBenQ2Oa?dl=0&#34; target=&#34;_blank&#34;&gt;All files&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/sh/13wwxorsv75ybc3/AAD-ivFd5NMr_WKe604mEilta?dl=0&#34; target=&#34;_blank&#34;&gt;Expenditure analysis files&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/sh/cxw4f6pug7wdmtb/AACUntpEE3aL_s_Ru12BCvjna?dl=0&amp;amp;lst=&#34; target=&#34;_blank&#34;&gt;Time-use analysis files&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
