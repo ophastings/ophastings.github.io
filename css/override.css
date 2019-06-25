@@ -92,10 +92,10 @@ a:hover {
 
 #profile .portrait {
   background-image: url('../img/portrait.jpg');
-  width: 240px;
-  height: 250px;
+  width: 220px; /* 240 */
+  height: 220px; /* 250 */
   margin: 0 auto;
-  border-radius: 10%;
+  border-radius: 15%;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
