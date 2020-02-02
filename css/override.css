@@ -3,12 +3,12 @@
  *  Set `custom_css = ["green.css"] in `config.toml`.
  *  Then save this file as `/static/css/green.css` relative to your website root (i.e. not in `themes/academic` directory).
  *  https://github.com/gcushen/hugo-academic
- 
+
  *CSU color is (30 77 43)
  * Alternate is (196, 214, 0)
  *64, 164, 92
  * 108, 198, 133
- 
+
  **************************************************/
 
 a,
@@ -92,10 +92,10 @@ a:hover {
 
 #profile .portrait {
   background-image: url('../img/portrait.jpg');
-  width: 220px; /* 240 */
-  height: 220px; /* 250 */
+  width: 230px; /* 240 */
+  height: 260px; /* 250 */
   margin: 0 auto;
-  border-radius: 15%;
+  border-radius: 20%;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -104,7 +104,7 @@ a:hover {
 
 html {
   font-family: sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
   color: rgba(0,0,0,0.8);
   line-height: 1.6;
 }
@@ -114,5 +114,3 @@ html {
     font-size: 16px;
   }
 }
-
-
