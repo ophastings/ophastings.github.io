@@ -1,0 +1,26 @@
+/* css styles */
+
+
+body {
+    font-size: 0.9em; /* Adjust this value as needed */
+}
+
+/* Change all links to green */
+a {
+    color: green;
+}
+
+/* Target header links (your name, page titles, etc.) and set them to green */
+.header a, .navbar-brand, .navbar-nav a {
+    color: green;
+}
+
+/* Set header links to turn dark green when hovered */
+.header a:hover, .navbar-brand:hover, .navbar-nav a:hover {
+    color: darkgreen;  /* Change to dark green on hover */
+}
+
+/* Optional: Change hover color for all other links */
+a:hover {
+    color: darkgreen;
+}
