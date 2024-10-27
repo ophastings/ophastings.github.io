@@ -130,39 +130,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<style>
-  /* Import Computer Modern Sans */
-@import url('https://fontlibrary.org//face/cmu-sans-serif');
 
-body {
-  font-family: 'CMU Sans Serif', 'Arial', sans-serif;
-}
 
-  /* Flexbox layout for larger screens */
-  .profile-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .profile-container img {
-    width: 150px;
-    margin-right: 20px;
-  }
-
-  /* Media query for mobile view */
-  @media (max-width: 600px) {
-    .profile-container {
-      display: block; /* Stack the image and text on narrow screens */
+  <!-- Import Computer Modern fonts -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+  <style>
+    /* Set Computer Modern as the default font for the site */
+    body {
+      font-family: "Computer Modern Sans", sans-serif;
     }
 
+    /* Flexbox layout for larger screens */
+    .profile-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
     .profile-container img {
-      margin: 0 auto 10px auto; /* Center image horizontally */
-      display: block;
+      width: 150px;
+      margin-right: 20px;
     }
-  }
-</style>
+
+    /* Media query for mobile view */
+    @media (max-width: 600px) {
+      .profile-container {
+        display: block; /* Stack the image and text on narrow screens */
+        text-align: center; /* Center the container content on mobile */
+      }
+
+      .profile-container img {
+        margin: 0 auto 10px auto; /* Center image horizontally */
+        display: block;
+      }
+    }
+  </style>
+
 
 <div class="profile-container">
   <div>
