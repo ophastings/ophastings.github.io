@@ -131,7 +131,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
   <!-- Import Computer Modern fonts -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
   <style>
@@ -156,12 +155,17 @@ ul.task-list li input[type="checkbox"] {
     @media (max-width: 600px) {
       .profile-container {
         display: block; /* Stack the image and text on narrow screens */
-        text-align: center; /* Center the container content on mobile */
       }
 
       .profile-container img {
         margin: 0 auto 10px auto; /* Center image horizontally */
         display: block;
+      }
+
+      /* Explicitly left-align text in the about section */
+      .profile-container div:last-child {
+        text-align: left;
+        margin: 0; /* Remove any inherited centering */
       }
     }
   </style>
@@ -172,13 +176,14 @@ ul.task-list li input[type="checkbox"] {
     <img src="img/PatHastings_profile.jpg" alt="Orestes 'Pat' Hastings">
   </div>
   <div>
-    <p>I'm an Associate Professor of <a href="https://www.libarts.colostate.edu/people/oph/" target="_blank">Sociology at Colorado State University</a>. My research lies broadly at the intersection of inequality, economic sociology, and family demography. Most of my current work focuses on using quantitative and computational methods to understand the socioeconomic correlates of parenting and their implications for children’s lives. But my interests have been quite varied, and I've also published articles on income inequality, happiness, religion, the spiritual but not religious, gender, social capital, social psychology, survey methodology, and even <a href="http://tf.nist.gov/general/pdf/2295.pdf" target="_blank">physics (long ago...)</a>. I not only study parenting but attempt to practice it as a dad to three boys, and, when possible, I enjoy running (sometimes <a href="https://ultrasignup.com/results_participant.aspx?fname=Orestes%20Pat&amp;lname=Hastings#" target="_blank">really, really far</a>), biking, climbing, and skiing. 
+    <p>I'm an Associate Professor of <a href="https://www.libarts.colostate.edu/people/oph/" target="_blank">Sociology at Colorado State University</a>. My research lies broadly at the intersection of inequality, economic sociology, and family demography. Most of my current work focuses on using quantitative and computational methods to understand the socioeconomic correlates of parenting and their implications for children’s lives. But my interests have been quite varied, and I've also published articles on income inequality, happiness, religion, the spiritual but not religious, gender, social capital, social psychology, survey methodology, and even <a href="http://tf.nist.gov/general/pdf/2295.pdf" target="_blank">physics(!)</a>. I not only study parenting but attempt to practice it as a dad to three boys, and, when possible, I enjoy running (sometimes <a href="https://ultrasignup.com/results_participant.aspx?fname=Orestes%20Pat&amp;lname=Hastings#" target="_blank">really, really far</a>), biking, climbing, and skiing.
     </p>
     <p>
     Here is my <a href="pdfs/HastingsCV.pdf" target="_blank">CV</a>. 
     </p>
   </div>
 </div>
+
 <section id="findme" class="level2">
 <h2 class="anchored" data-anchor-id="findme">Find Me</h2>
 <ul>
@@ -193,61 +198,63 @@ ul.task-list li input[type="checkbox"] {
 <section id="updates" class="level2">
 <h2 class="anchored" data-anchor-id="updates">Updates</h2>
 <ul>
-<li><p>Sabbatical! This fall I am visiting the <a href="https://www.sciencespo.fr/osc/en.html">Centre for Research on Social Inequalities, Sciences Po</a> and <a href="https://www.nuffield.ox.ac.uk">Nuffield College, University of Oxford</a> (Oct 2024)</p></li>
-<li><p>How can we measure the cultural logics of parenting using computational text analysis? We show one approach in a <a href="https://doi.org/10.1016/j.ssresearch.2024.103074">new paper in Social Science Research</a> (with <a href="https://www.lucamariapesando.com/">Luca Maria Pesando</a>). We find two key dimensions of parenting logics: (1) assertive vs negotiated parenting, and (2) pedagogic vs pragmatic parenting. (Sept 2024)</p></li>
-<li><p>New paper! There are larger class gaps in parental investments during the summer and among families with younger children. <a href="https://sites.google.com/view/joe-labriola">Joe LaBriola</a> and I examine this (and more) in <a href="https://doi.org/10.1016/j.rssm.2023.100846">“The Summer Parental Investment Gap? Socioeconomic Gaps in the Seasonality of Parental Expenditures and Time with School-age Children”</a> that is published in <em>Research in Social Stratification and Mobility</em>. (Nov 2023)</p></li>
+<li><p>New paper in the <em>Journal of Marriage and Family</em> shows how <a href="http://doi.org/10.1111/jomf.13046">parental financial investments changed during COVID and (mostly) returned back</a> to how they were (Nov 2024)</p></li>
+<li><p>Sabbatical! This fall I am visiting the <a href="https://www.sciencespo.fr/osc/en.html">Centre for Research on Social Inequalities, Sciences Po</a> and <a href="https://www.nuffield.ox.ac.uk">Nuffield College, University of Oxford</a>. (Oct 2024)</p></li>
+<li><p>How can we measure the cultural logics of parenting using computational text analysis? We show one approach in a <a href="https://doi.org/10.1016/j.ssresearch.2024.103074">new paper in Social Science Research</a> and find two key dimensions of parenting logics: (1) assertive vs negotiated parenting and (2) pedagogic vs pragmatic parenting. (Sept 2024)</p></li>
+<li><p>New paper! There are larger class gaps in parental investments during the summer and among families with younger children. We examine this (and more) in <a href="https://doi.org/10.1016/j.rssm.2023.100846">“The Summer Parental Investment Gap? Socioeconomic Gaps in the Seasonality of Parental Expenditures and Time with School-age Children”</a> that is published in <em>Research in Social Stratification and Mobility</em>. (Nov 2023)</p></li>
 <li><p>Tenured and promoted to Associate Professor! (July 2023)</p></li>
-<li><p>My new paper <a href="https://doi.org/10.1080/02732173.2023.2169214">“Linking Individual and Collective Social Capital: Operationalization, Association, and Sociodemographic Heterogeneity”</a> with <a href="https://sociology.colostate.edu/people/scosby/">Shawna Bendeck</a> is now published in <em>Sociological Spectrum</em>. (Feb 2023)</p></li>
+<li><p>My new paper <a href="https://doi.org/10.1080/02732173.2023.2169214">“Linking Individual and Collective Social Capital: Operationalization, Association, and Sociodemographic Heterogeneity”</a> is now published in <em>Sociological Spectrum</em>. (Feb 2023)</p></li>
 <li><p>My new data visualization article <a href="https://doi.org/10.1177/23780231221103054">“Parental Investments of Money for White, Black, and Hispanic Children in the United States”</a> is now published in <em>Socius</em>. (June 2022)</p></li>
 <li><p>Received a Summer Institutes in Computational Social Science <a href="https://sicss.io/">(SICSS)</a> research grant from the Social Science Research Council to support my project <a href="https://www.ssrc.org/grantees/whats-a-parent-to-do-measuring-parenting-approaches-in-the-us-with-topic-modeling-for-short-texts/">“What’s a Parent to do? Measuring Parenting Approaches in the US with Topic Modeling for Short Texts”</a> with <a href="https://www.lucamariapesando.com">Luca Maria Pesando</a>. (March 2022)</p></li>
-<li><p>New article! <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jomf.12741">“Family Structure and Inequalities in Parents’ Financial Investments in Children”</a> with <a href="https://www.hks.harvard.edu/faculty/daniel-schneider">Daniel Schneider</a> is in the <em>Journal of Marriage and Family</em>. We previously summarized some of this research in <a href="https://theconversation.com/a-quarter-of-us-parents-are-unmarried-and-that-changes-how-much-they-invest-in-their-kids-120931"><em>The Conversation</em></a> (May 2021)</p></li>
-<li><p>My new article <a href="https://academic.oup.com/sf/article/99/2/447/5810065?guestAccessKey=5e6e6500-a0f3-46dd-a268-bab3979f5fa8">“Happiness in Hard Times: Does Religion Buffer the Negative Effect of Unemployment on Happiness?”</a> with <a href="https://sociology.stanford.edu/people/kassandra-roeser">Kassandra Roeser</a> has now been published in <em>Social Forces</em>. (Nov 2020)</p></li>
-<li><p>The <a href="https://housingmatters.urban.org/research-summary/school-quality-influences-where-parents-choose-live-and-how-much-theyre-willing">Urban Institute’s <em>Housing Matters</em> posted a summary</a> of my recently <a href="https://www.sociologicalscience.com/articles-v6-16-416/">published research</a> with <a href="https://wws.princeton.edu/faculty-research/faculty/amg5">Adam Goldstein</a> on how school quality shapes how much parent’s are willing to spend on housing. (Jan 2020)</p></li>
+<li><p>New article! <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jomf.12741">“Family Structure and Inequalities in Parents’ Financial Investments in Children”</a> is in the <em>Journal of Marriage and Family</em>. We previously summarized some of this research in <a href="https://theconversation.com/a-quarter-of-us-parents-are-unmarried-and-that-changes-how-much-they-invest-in-their-kids-120931"><em>The Conversation</em></a> (May 2021)</p></li>
+<li><p>New article! <a href="https://academic.oup.com/sf/article/99/2/447/5810065?guestAccessKey=5e6e6500-a0f3-46dd-a268-bab3979f5fa8">“Happiness in Hard Times: Does Religion Buffer the Negative Effect of Unemployment on Happiness?”</a> has now been published in <em>Social Forces</em>. (Nov 2020)</p></li>
+<li><p>The <a href="https://housingmatters.urban.org/research-summary/school-quality-influences-where-parents-choose-live-and-how-much-theyre-willing">Urban Institute’s <em>Housing Matters</em> posted a summary</a> of our recently <a href="https://www.sociologicalscience.com/articles-v6-16-416/">published research</a> on how school quality shapes how much parent’s are willing to spend on housing. (Jan 2020)</p></li>
 </ul>
 </section>
 <section id="research" class="level2">
 <h2 class="anchored" data-anchor-id="research">Research</h2>
-<p><strong>“The Fall and Rise of Parental Financial Investments during the COVID-19 Pandemic.”</strong> (Forthcoming) <em>Journal of Marriage and Family</em>.</p>
+<p><strong><a href="http://doi.org/10.1111/jomf.13046">“The Fall and Rise of Parental Financial Investments during the COVID-19 Pandemic.”</a></strong> (2024) <em>Journal of Marriage and Family</em>.</p>
 <ul>
-<li>with Mariana Amorim and Sabino Kornrich</li>
+<li>with <a href="https://soc.wsu.edu/people/archive-faculty/amorim-mariana/">Mariana Amorim</a> and <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/sabino-kornrich.html">Sabino Kornrich</a></li>
+<li><a href="pdfs/appendix_parental-investments-covid.pdf">Appendix</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.ssresearch.2024.103074">“What’s a Parent to do? Measuring Cultural Logics of Parenting with Computational Text Analysis.”</a></strong> (2024). <em>Social Science Research</em> 124:103074.</p>
 <ul>
-<li>with Luca Maria Pesando</li>
+<li>with <a href="https://www.lucamariapesando.com/">Luca Maria Pesando</a></li>
 <li><a href="https://github.com/ophastings/replications/tree/main/2024-parenting-logics-text-analysis-SSR">Replication Materials</a></li>
 <li><a href="pdfs/appendix_Parenting-Logics-Text-Analysis.pdf">Appendix</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.rssm.2023.100846">“The Summer Parental Investment Gap? Socioeconomic Gaps in the Seasonality of Parental Expenditures and Time with School-Age Children.”</a></strong> (2023). <em>Research in Social Stratification and Mobility</em> 87:100846.</p>
 <ul>
-<li>with Joe LaBriola</li>
+<li>with <a href="https://sites.google.com/view/joe-labriola">Joe LaBriola</a></li>
 <li><a href="pdfs/appendix_parental-investments-summer-gap.pdf">Appendix</a></li>
 <li><a href="https://osf.io/preprints/socarxiv/qvdcu">Open-Access Preprint</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1080/02732173.2023.2169214">“Linking Individual and Collective Social Capital: Operationalization, Association, and Sociodemographic Heterogeneity.”</a></strong> (2023). <em>Sociological Spectrum</em> 43(1):31-51.</p>
 <ul>
-<li>with Shawna Bendeck</li>
+<li>with <a href="https://sociology.colostate.edu/people/scosby/">Shawna Bendeck</a></li>
 <li><a href="pdfs/appendix_social-capital-heterogeneity.pdf">Appendix</a></li>
 <li><a href="https://osf.io/preprints/socarxiv/mf5kq">Open-Access Preprint</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/23780231221103054">“Parental Investments of Money for White, Black, and Hispanic Children in the United States.”</a></strong> (2022). <em>Socius</em> 8:1-2.</p>
 <ul>
-<li><a href="pdfs/supplement_2022_parental-investments-race.pdf">Appendix</a></li>
+<li><a href="pdfs/supplement_2022_parental-investments-race.pdf">Appendix (includes code)</a></li>
 </ul>
 <p><strong><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jomf.12741">“Family Structure and Inequalities in Parents’ Financial Investments in Children.”</a></strong> (2021). <em>Journal of Marriage and Family</em> 83(3):717-736.</p>
 <ul>
-<li>with Daniel Schneider</li>
+<li>with <a href="https://www.hks.harvard.edu/faculty/daniel-schneider">Daniel Schneider</a></li>
 <li><a href="pdfs/Appendix_family-structure-parental-Investments.pdf">Appendix</a></li>
 <li>Coverage: <a href="https://www.brookings.edu/blog/up-front/2020/12/09/class-notes-rising-income-and-wealth-inequality-parent-spending-and-more/">Brookings Institution <em>Class Notes</em></a></li>
 </ul>
 <p><strong><a href="https://academic.oup.com/sf/article/99/2/447/5810065?guestAccessKey=5e6e6500-a0f3-46dd-a268-bab3979f5fa8">“Happiness in Hard Times: Does Religion Buffer the Negative Effect of Unemployment on Happiness?”</a></strong> (2020). <em>Social Forces</em> 99(2):447-473.</p>
 <ul>
-<li>with Kassandra K. Roeser</li>
+<li>with <a href="https://sociology.stanford.edu/people/kassandra-roeser">Kassandra Roeser</a></li>
 <li><a href="pdfs/appendix_happy-hard-times-religion.pdf">Replication Materials</a></li>
 <li><a href="https://osf.io/preprints/socarxiv/pabx2">Open-Access Preprint</a></li>
 </ul>
 <p><strong><a href="https://theconversation.com/a-quarter-of-us-parents-are-unmarried-and-that-changes-how-much-they-invest-in-their-kids-120931">“A Quarter of US Parents are Unmarried – and that Changes How Much They Invest in Their Kids”</a></strong> (2019). <em>The Conversation</em>.</p>
 <ul>
-<li>with Daniel Schneider</li>
+<li>with <a href="https://www.hks.harvard.edu/faculty/daniel-schneider">Daniel Schneider</a></li>
 <li>Coverage: <a href="https://www.dissentmagazine.org/online_articles/meritocracys-casualties"><em>Dissent</em></a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.rssm.2019.01.004">“Who Feels It? Income Inequality, Relative Deprivation, and Financial Satisfaction in U.S. States, 1973–2012.”</a></strong> (2019). <em>Research in Social Stratification and Mobility</em> 60:1-15.</p>
@@ -256,12 +263,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong><a href="https://www.sociologicalscience.com/articles-v6-16-416/">“Buying In: Positional Competition, Schools, Income Inequality, and Housing Consumption.”</a></strong> (2019). <em>Sociological Science</em> 6:416-445.</p>
 <ul>
-<li>with Adam Goldstein</li>
+<li>with <a href="https://sociology.princeton.edu/people/adam-goldstein">Adam Goldstein</a></li>
 <li>Coverage: <a href="https://housingmatters.urban.org/research-summary/school-quality-influences-where-parents-choose-live-and-how-much-theyre-willing">Urban Institute</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/0003122418772034">“Income Inequality and Class Divides in Parental Investment”</a></strong> (2018). <em>American Sociological Review</em> 83(3):475-507.</p>
 <ul>
-<li>with Daniel Schneider, Joe LaBriola</li>
+<li>with <a href="https://www.hks.harvard.edu/faculty/daniel-schneider">Daniel Schneider</a>, <a href="https://sites.google.com/view/joe-labriola">Joe LaBriola</a></li>
 <li><a href="pdfs/parentinginequal_supplement.pdf">Appendix</a></li>
 <li><a href="https://github.com/ophastings/replications/tree/main/2018-inequality-parental-investment-ASR">Replication Materials</a></li>
 <li>Prize for Exemplary Work on Inequality and Decision Making, The Tobin Project</li>
@@ -274,12 +281,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong><a href="http://doi.org/10.1177/2378023117722330">“Keeping up with the Joneses: How Households Fared in the Era of High Income Inequality and the Housing Price Bubble, 1999–2007”</a></strong> (2017). <em>Socius</em> 3:1-15.</p>
 <ul>
-<li>with Neil Fligstein, Adam Goldstein</li>
+<li>with <a href="https://sociology.berkeley.edu/faculty/neil-fligstein">Neil Fligstein</a>, <a href="https://sociology.princeton.edu/people/adam-goldstein">Adam Goldstein</a></li>
 <li>Coverage: <a href="https://www.nytimes.com/2016/07/07/opinion/campaign-stops/how-falling-behind-the-joneses-fueled-the-rise-of-trump.html"><em>New York Times</em></a>, <a href="https://www.washingtonpost.com/news/wonk/wp/2016/07/27/why-rich-neighbors-are-bad-for-you"><em>Washington Post</em> Wonkblog</a>, <a href="http://mailchi.mp/tobinproject/tobin-scholar-newsletter-the-effects-of-exposure-to-rising-inequality-how-misperceptions-shape-opinions-on-inequality-and-more">The Tobin Project</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/sf/sox061">“Income Inequality and Household Labor”</a></strong> (2017). <em>Social Forces</em> 96(2):481-506.</p>
 <ul>
-<li>with Daniel Schneider</li>
+<li>with <a href="https://www.hks.harvard.edu/faculty/daniel-schneider">Daniel Schneider</a></li>
 <li><a href="pdfs/Appendix_Income-Inequality-Household-Labor.pdf">Appendix</a></li>
 <li><a href="https://osf.io/preprints/socarxiv/pwny5">Open-Access Preprint</a></li>
 <li>Article of the Year Award, ASA Family Section</li>
@@ -291,23 +298,23 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong><a href="https://www.sociologicalscience.com/articles-v3-43-971/">“Reliability of the Core Items in the General Social Survey: Estimates from the Three-wave Panels, 2006-2014”</a></strong> (2016). <em>Sociological Science</em> 3:971-1002.</p>
 <ul>
-<li>with Michael Hout</li>
+<li>with <a href="https://www.mikehout.com">Michael Hout</a></li>
 </ul>
 <p><strong><a href="http://link.springer.com/article/10.1007/s13524-015-0437-7">“Socioeconomic Variation in the Demographic Response to Economic Shocks in the United States: Evidence from the Great Recession”</a></strong> (2015). <em>Demography</em> 52(6):1893-1915.</p>
 <ul>
-<li>with Daniel Schneider</li>
+<li>with <a href="https://www.hks.harvard.edu/faculty/daniel-schneider">Daniel Schneider</a></li>
 </ul>
 <p><strong><a href="https://doi.org/10.1017/CBO9781139226479.019">“Recession, Religion, and Happiness, 2006–2010”</a></strong> (2014). In <em>Religion and Inequality in America: Research and Theory on Religion’s Role in Stratification</em>, Lisa A. Keister and Darren E. Sherkat (eds.). Cambridge University Press.</p>
 <ul>
-<li>with Michael Hout</li>
+<li>with <a href="https://www.mikehout.com">Michael Hout</a></li>
 </ul>
 <p><strong><a href="https://academic.oup.com/socrel/article-abstract/74/4/471/1692486/Rethinking-Religious-Gender-Differences-The-Case">“Rethinking Religious Gender Differences: The Case of Elite Women”</a></strong> (2013). <em>Sociology of Religion</em> 74(4):471-495.</p>
 <ul>
-<li>with D. Michael Lindsay</li>
+<li>with <a href="https://www.taylor.edu/about/president/president-lindsay/">D. Michael Lindsay</a></li>
 </ul>
 <p><strong><a href="http://gss.norc.org/Documents/reports/methodological-reports/MR119.pdf">“Reliability and Stability Estimates for the GSS Core Items from the Three-wave Panels, 2006–2010”</a></strong> (2012). <em>GSS Methodological Report #119</em>. NORC.</p>
 <ul>
-<li>with Michael Hout</li>
+<li>with <a href="https://www.mikehout.com">Michael Hout</a></li>
 </ul>
 <p><strong><a href="http://tf.nist.gov/general/pdf/2295.pdf">“Recent Atomic Clock Comparisons at NIST”</a></strong> (2008). <em>The European Physical Journal Special Topics</em> 163:19-35.</p>
 <ul>
