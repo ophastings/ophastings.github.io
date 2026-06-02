@@ -1,26 +1,177 @@
-/* css styles */
-
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface');
 
 body {
-    font-size: 0.9em; /* Adjust this value as needed */
+  font-family: 'PT Sans', system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #111827;
 }
 
-/* Change all links to green */
+/* Links — CSU green */
 a {
-    color: green;
+  color: #1e8449;
+  text-decoration: none;
 }
 
-/* Target header links (your name, page titles, etc.) and set them to green */
-.header a, .navbar-brand, .navbar-nav a {
-    color: green;
-}
-
-/* Set header links to turn dark green when hovered */
-.header a:hover, .navbar-brand:hover, .navbar-nav a:hover {
-    color: darkgreen;  /* Change to dark green on hover */
-}
-
-/* Optional: Change hover color for all other links */
 a:hover {
-    color: darkgreen;
+  color: #196f3d;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  font-family: 'PT Sans', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827 !important;
+}
+
+.navbar-brand:hover {
+  color: #1e8449 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #374151 !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1e8449 !important;
+  text-decoration: none;
+}
+
+/* Section headings */
+h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Profile section — CSS grid so photo+links stay in col 1, bio in col 2 */
+.profile-container {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 2rem;
+  row-gap: 0.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-photo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.profile-photo img {
+  width: 165px;
+  border-radius: 8px;
+  display: block;
+}
+
+.profile-bio {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.profile-links {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Social links — vertical column under photo */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  gap: 0.45rem;
+}
+
+.social-link img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Updates list */
+#updates ul {
+  padding-left: 1.2rem;
+}
+
+#updates ul > li {
+  margin-bottom: 0.5rem;
+}
+
+/* Research section — compact */
+#research p {
+  margin-bottom: 0 !important;
+  margin-top: 0.75rem;
+}
+
+#research ul {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 2rem;
+}
+
+#research ul > li {
+  margin-bottom: 0.05rem;
+}
+
+/* Quarto wraps loose list items in <p> — strip that extra margin */
+#research ul li > p {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .profile-photo { order: 1; }
+  .profile-photo img { width: 130px; margin: 0 auto; }
+  .profile-bio { order: 2; }
+  .profile-links { order: 3; }
+
+  .profile-links .social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+  }
+
+  .profile-photo img {
+    width: 130px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .profile-container div:last-child {
+    text-align: left;
+  }
 }
